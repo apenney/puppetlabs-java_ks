@@ -11,6 +11,8 @@ describe Puppet::Type.type(:java_ks) do
       :password    => 'puppet',
       :certificate => '/tmp/app.example.com.pem',
       :private_key => '/tmp/private/app.example.com.pem',
+      :storetype   => 'jceks',
+      :extension   => 'san=ip:localhost',
       :provider    => :keytool
     }
     @provider = stub('provider', :class => Puppet::Type.type(:java_ks).defaultprovider, :clear => nil)

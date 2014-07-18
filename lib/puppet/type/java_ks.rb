@@ -79,7 +79,10 @@ module Puppet
     end
 
     newparam(:storetype) do
-      desc 'Optional storetype supports jceks at the momment'
+      desc 'Optional storetype
+      Valid options: <jceks>'
+
+      newvalues(:jceks)
     end
 
     newparam(:chain) do
